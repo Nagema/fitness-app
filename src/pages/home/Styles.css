@@ -14,7 +14,7 @@
     font-family: Helvetica, Arial, sans-serif;
     font-size: px;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     display: inline-block;
     animation: fadeIn 1.5s forwards;
     opacity: 0;
@@ -92,12 +92,23 @@
     padding: 10px;
     border-radius: 5px;
     background-color: #cc482d ;
-    color: #ffff;
+    color: black;
 }
 .home-buttons button:hover{
     background: none;
     border: solid 0.1px rgb(121, 119, 119);
     background-color: #054368;
-    color: #ffff;
+    color: black;
     cursor: pointer;
+}
+
+.top-part {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone {
+  width: 10%;
 }

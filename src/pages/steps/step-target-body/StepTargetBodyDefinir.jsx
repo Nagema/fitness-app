@@ -18,7 +18,7 @@ const StepTargetBody = () => {
     </div>
       <div className="step-label">
       <label>
-        <input className="none" name="de-playa" type="radio" value="Playa" onClick={(ev) => nextStep(ev, dispatch, navigate, '/step-bodytype')}/>
+        <input className="none" name="de-playa" type="radio" value="Playa" onClick={(ev) => navigate('/step-bodytype')}/>
         <div className="step-options">
           <h2>De playa</h2>
         </div>
@@ -27,7 +27,7 @@ const StepTargetBody = () => {
         </div>
       </label>
       <label>
-        <input className="none" name="ejercitado" type="radio" value="Ejercitado" onClick={(ev) => nextStep(ev, dispatch, navigate, '/step-bodytype')}/>
+        <input className="none" name="ejercitado" type="radio" value="Ejercitado" onClick={(ev) => navigate('/step-bodytype')}/>
         <div className="step-options">
           <h2>Ejercitado</h2>
         </div>
@@ -36,7 +36,7 @@ const StepTargetBody = () => {
         </div>
       </label>
       <label>
-        <input className="none" name="crossfit" type="radio" value="Crossfit" onClick={(ev) => nextStep(ev, dispatch, navigate, '/step-bodytype')}/>
+        <input className="none" name="crossfit" type="radio" value="Crossfit" onClick={(ev) => navigate('/step-bodytype')}/>
         <div className="step-options">
           <h2>De crossfit</h2>
         </div>

@@ -7,42 +7,42 @@ const StepWorkouts = () => {
   return (
     <div className="steps-container">
       <h1>¿Qué deportes te interesan?</h1>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
+      <div className="checkbox-container">
+        <label className="checkbox-label">
             <input type="checkbox" name="workouts" />
-            <p class="mark">Entrenamiento en gimnasio</p>
+            <p className="mark">Entrenamiento en gimnasio</p>
         </label>
       </div>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
+      <div className="checkbox-container">
+        <label className="checkbox-label">
           <input type="checkbox" name="workouts" />
-          <span class="mark">Entrenamiento en casa</span>
+          <span className="mark">Entrenamiento en casa</span>
         </label>
       </div>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
+      <div className="checkbox-container">
+        <label className="checkbox-label">
           <input type="checkbox" name="workouts" />
-          <span class="mark">Boxeo</span>
+          <span className="mark">Boxeo</span>
         </label>
       </div>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
-          <input type="checkbox" name="workouts" />
-
-          <span class="mark">Artes marciales</span>
-        </label>
-      </div>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
+      <div className="checkbox-container">
+        <label className="checkbox-label">
           <input type="checkbox" name="workouts" />
 
-          <span class="mark">Correr</span>
+          <span className="mark">Artes marciales</span>
         </label>
       </div>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
+      <div className="checkbox-container">
+        <label className="checkbox-label">
           <input type="checkbox" name="workouts" />
-          <span class="mark">Ningún otro</span>
+
+          <span className="mark">Correr</span>
+        </label>
+      </div>
+      <div className="checkbox-container">
+        <label className="checkbox-label">
+          <input type="checkbox" name="workouts" />
+          <span className="mark">Ningún otro</span>
         </label>
       </div>
       <button

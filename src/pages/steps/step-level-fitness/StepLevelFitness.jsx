@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { checkingStep } from "../../../redux/workouts/workouts.functions";
 import './InputRange.css'
 
 const StepLevelFitness = () => {
@@ -12,6 +13,9 @@ const StepLevelFitness = () => {
     "Trato de hacer ejercicio una vez a la semana, pero todavía no es regular."
   );
   const [newValue, setNewValue] = useState('A');
+  const { userData } = useSelector(
+    (state) => state.workouts
+  );
 
   useEffect(() => {
     if (value <= 4) {
@@ -67,6 +71,7 @@ const StepLevelFitness = () => {
 
   const newNextStep = () => {
     dispatch({ type: "addUserData", payload: newValue });
+    dispatch(checkingStep(3, userData))
     navigate("/step-level-of-fat");
     console.log("valor", newValue);
   };

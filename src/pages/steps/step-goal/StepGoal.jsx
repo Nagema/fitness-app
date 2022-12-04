@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import nextStep from "../../../shared/nextStep";
 import "../Steps.css";
@@ -7,6 +7,10 @@ import "../Steps.css";
 const StepGoal = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { userData } = useSelector(
+    (state) => state.workouts
+  );
 
   return (
     <div className="steps-container">
@@ -18,11 +22,12 @@ const StepGoal = () => {
       <div className="step-label">
         <label>
           <input className="none"
+            step='1'
             name="bodytype"
             type="radio"
             value="Perder peso"
             onClick={(ev) =>
-              nextStep(ev, dispatch, navigate, "/step-target-body-perder-peso")
+              nextStep(ev, dispatch, navigate, "/step-target-body-perder-peso", userData)
             }
           />
           <div className="step-options">
@@ -37,6 +42,7 @@ const StepGoal = () => {
         </label>
         <label>
           <input className="none"
+            step='1'
             name="bodytype"
             type="radio"
             value="Crecer musculo"
@@ -45,7 +51,8 @@ const StepGoal = () => {
                 ev,
                 dispatch,
                 navigate,
-                "/step-target-body-crecer-musculo"
+                "/step-target-body-crecer-musculo",
+                userData
               )
             }
           />
@@ -61,11 +68,12 @@ const StepGoal = () => {
         </label>
         <label>
           <input className="none"
+            step='1'
             name="bodytype"
             type="radio"
             value="Define tu cuerpo"
             onClick={(ev) =>
-              nextStep(ev, dispatch, navigate, "/step-target-body-definir")
+              nextStep(ev, dispatch, navigate, "/step-target-body-definir", userData)
             }
           />
           <div className="step-options">

@@ -3,6 +3,7 @@
     padding: 1em;
     display: flex;
     justify-content: space-between;
+    background-color:rgb(255, 255, 255);
 }
 .menu-btn{
     width: 20px;
@@ -16,13 +17,13 @@
 }
 .logo-wrapper {
     font-size: 16px;
-    color: white;
+    color: black;
 }
 .userName-wrapper {
     line-height: 1.5;
 }
 .userName-wrapper a {
-    color: white;
+    color: black;
 }
 
 .logo-wrapper svg {

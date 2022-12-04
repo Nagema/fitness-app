@@ -1,11 +1,15 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import nextStep from "../../../shared/nextStep";
 
 const StepProblemArea = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { userData } = useSelector(
+    (state) => state.workouts
+  );
 
   return (
       <div className="steps-container">
@@ -15,10 +19,11 @@ const StepProblemArea = () => {
         <div className="step-label">
         <label>
           <input className="none"
+            step='2'
             name="problemarea"
             type="radio"
             value="Parte superior"
-            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness")}
+            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness", userData)}
           />
           <div className="step-options">
             <h2>Pecho débil</h2>
@@ -33,10 +38,11 @@ const StepProblemArea = () => {
         </label>
         <label>
           <input className="none"
+            step='2'
             name="problemarea"
             type="radio"
             value="Parte superior"
-            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness")}
+            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness", userData)}
           />
           <div className="step-options">
             <h2>Brazos flacos</h2>
@@ -51,10 +57,11 @@ const StepProblemArea = () => {
         </label>
         <label>
           <input className="none"
+            step='2'
             name="problemarea"
             type="radio"
             value="Parte media"
-            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness")}
+            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness", userData)}
           />
           <div className="step-options">
             <h2>Abdomen</h2>
@@ -69,10 +76,11 @@ const StepProblemArea = () => {
         </label>
         <label>
           <input className="none"
+            step='2'
             name="problemarea"
             type="radio"
             value="Parte inferior"
-            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness")}
+            onClick={(ev) => nextStep(ev, dispatch, navigate, "/step-level-of-fitness", userData)}
           />
           <div className="step-options">
             <h2>Piernas flacas</h2>

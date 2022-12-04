@@ -18,15 +18,20 @@ const Home = () => {
 
   return (
     <div className="main-wrapper">
-      <div>
-        <h1>
-          <div className="animation">
-            <span className="first">Don't sit </span>
-            <span className="oh">
-              <span className="second">get fit</span>
-            </span>
-          </div>
-        </h1>
+      <div className="top-part">
+        <div>
+          <h1>
+            <div className="animation">
+              <span className="first">Don't sit </span>
+              <span className="oh">
+                <span className="second">get fit</span>
+              </span>
+            </div>
+          </h1>
+        </div>
+        <div>
+          <img className="phone" src="https://madmuscles.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FappTeaserImg.dc95b0da.png&w=1366&q=75" alt="home" />
+        </div>
       </div>
       <div className="home-buttons">
         {!user ? (

@@ -18,7 +18,7 @@ const StepTargetBody = () => {
       </div>
       <div className="step-label">
       <label>
-        <input className="none" name="delgado" type="radio" value="Delgado" onClick={(ev) => nextStep(ev, dispatch, navigate, '/step-bodytype')}/>
+        <input className="none" name="delgado" type="radio" value="Delgado" onClick={(ev) => navigate('/step-bodytype')}/>
         <div className="step-options">
           <h2>Delgado</h2>
         </div>
@@ -27,7 +27,7 @@ const StepTargetBody = () => {
         </div>
       </label>
       <label>
-        <input className="none" name="delgado-tonificado" type="radio" value="Delgado y tonificado" onClick={(ev) => nextStep(ev, dispatch, navigate, '/step-bodytype')}/>
+        <input className="none" name="delgado-tonificado" type="radio" value="Delgado y tonificado" onClick={(ev) => navigate('/step-bodytype')}/>
         <div className="step-options">
           <h2>Delgado y tonificado</h2>
         </div>
