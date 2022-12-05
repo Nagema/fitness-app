@@ -22,6 +22,7 @@ import StepWorkoutIssues from "./pages/steps/step-workout-issues/StepWorkoutIssu
 import StepAditionalGoals from "./pages/steps/step-additional-goals/StepAditionalGoals";
 import StepWorkoutFrequency from "./pages/steps/step-workout-frequency/StepWorkoutFrequency";
 import EditRutines from "./pages/edit-rutines/EditRutines";
+import Charts from "./components/charts/Charts";
 
 function App() {
   const dispatch = useDispatch();
@@ -64,6 +65,7 @@ function App() {
         <Route path="/step-final" element={<StepFinal />} />
         <Route path="/step-bodytype" element={<StepBodytype />} />
         <Route path="/edit-rutines" element={<EditRutines />} />
+        <Route path='/weights' element={<Charts/>} />
       </Routes>
     </div>
   );
