@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../../components/loading/Loading";
 import { getWorkouts } from "../../../redux/workouts/workouts.functions";
+import { API } from "../../../shared/services/api";
 
 const StepFinal = () => {
   const [rutina, setRutina] = useState();
@@ -54,9 +55,6 @@ const StepFinal = () => {
                           >
                             Editar ejercicio
                           </button>
-                          <button className="edit-delete-button ">
-                            Borrar ejercicio
-                          </button>
                         </div>
                       )}
                     </div>
@@ -76,11 +74,11 @@ const StepFinal = () => {
                       {item?.rest != 0 ? <p>Descanso: {item?.rest}</p> : ""}
                       {user?.rol === "admin" && (
                         <div>
-                          <button className="edit-delete-button ">
+                          <button
+                            className="edit-delete-button"
+                            onClick={() => navigate(`/edit/${item?._id}`)}
+                          >
                             Editar ejercicio
-                          </button>
-                          <button className="edit-delete-button ">
-                            Borrar ejercicio
                           </button>
                         </div>
                       )}
@@ -101,11 +99,11 @@ const StepFinal = () => {
                       {item?.rest != 0 ? <p>Descanso: {item?.rest}</p> : ""}
                       {user?.rol === "admin" && (
                         <div>
-                          <button className="edit-delete-button ">
+                          <button
+                            className="edit-delete-button"
+                            onClick={() => navigate(`/edit/${item?._id}`)}
+                          >
                             Editar ejercicio
-                          </button>
-                          <button className="edit-delete-button ">
-                            Borrar ejercicio
                           </button>
                         </div>
                       )}

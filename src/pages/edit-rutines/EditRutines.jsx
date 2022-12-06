@@ -18,6 +18,15 @@ const EditRutines = () => {
     fetchWorkout();
   }, []);
 
+  const deleteWorkout = (id) => {
+    try {
+      API.delete(`/exercises/delete/${id}`);
+      navigate(-1);
+    } catch {
+      console.log("error");
+    }
+  };
+
   const editExercise = async (data) => {
     const formData = new FormData();
     formData.append("description", data.description);
@@ -55,6 +64,12 @@ const EditRutines = () => {
         <button className="edit-delete-button">Editar ejercicio</button>
       </form>
       <div>
+        <button
+          className="edit-delete-button"
+          onClick={(e) => deleteWorkout(id)}
+        >
+          Borrar ejercicio
+        </button>
         <button className="edit-delete-button" onClick={() => navigate(-1)}>
           Volver atras
         </button>
