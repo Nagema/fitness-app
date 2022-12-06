@@ -14,6 +14,9 @@ const BarChart = ({chartData}) => {
             plugins: {
                 tooltip: {
                     enabled: true,
+                    callbacks: {
+                        title: () => null
+                    }
                 },
                 legend: {
                     display: false
