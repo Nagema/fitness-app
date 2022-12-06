@@ -1,5 +1,3 @@
-
-
 .footer-wrapper {
     position: absolute;
     bottom: 0;
@@ -12,12 +10,15 @@
     align-items: center;
     padding: 0;
 }
+
 .creators li {
     display: flex;
 }
+
 .creators img {
     width: 11px;
 } 
+
 .creators-button {
     position: absolute;
     bottom: 0;
@@ -26,6 +27,7 @@
     border: none;
     color: white;
 }
+
 @keyframes move {
     from {
       margin-left: 100%;
