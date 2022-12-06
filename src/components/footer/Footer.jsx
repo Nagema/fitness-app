@@ -1,22 +1,49 @@
-import React, { useState } from 'react'
-import './Footer.css'
+import React, { useState } from "react";
+import githubIcon from "../../assets/github.svg";
+import "./Footer.css";
 const Footer = () => {
-    const [show, setShow] = useState(false)
-    const showDevelopers= () =>{
-        setShow(!show);
-        console.log(show);
-      }
+  const [show, setShow] = useState(false);
+  const showDevelopers = () => {
+    setShow(!show);
+    console.log(show);
+  };
   return (
-    <div className='footer-wrapper'>
-        <button onClick={showDevelopers}>Developers</button>
-        {show && <ul className='creators'>
-            <li ><a href="https://github.com/Nagema">Angélica</a></li>
-            <li><a href="https://github.com/clauadri">Adrian</a></li>
-            <li><a href="https://github.com/kinddddd">Alvaro</a></li>
-            <li><a href="https://github.com/BillyVanHeel">Guillermo</a></li>
-        </ul>}
-    </div>
-  )
-}
+    <footer className="footer-wrapper">
+      {!show && (
+        <button className="creators-button" onClick={showDevelopers}>
+          Developers
+        </button>
+      )}
+      {show && (
+        <ul className="creators">
+          <li>
+            <a href="https://github.com/clauadri" target="_blank">
+              Adrian
+            </a>
+            <img src={githubIcon} alt="github icon" />
+          </li>
+          <li>
+            <a href="https://github.com/kinddddd" target="_blank">
+              Alvaro
+            </a>
+            <img src={githubIcon} alt="github icon" />
+          </li>
+          <li>
+            <a href="https://github.com/Nagema" target="_blank">
+              Angélica
+            </a>
+            <img src={githubIcon} alt="github icon" />
+          </li>
+          <li>
+            <a href="https://github.com/BillyVanHeel" target="_blank">
+              Guillermo
+            </a>
+            <img src={githubIcon} alt="github icon" />
+          </li>
+        </ul>
+      )}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
