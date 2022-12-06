@@ -17,7 +17,7 @@ const Charts = () => {
     const [weightData, setWeightData] = useState({
         labels: usersStats.map((data) => data._id),
         datasets: [{
-            label: 'Pesos',
+            label: 'Peso del usuario',
             data: usersStats.map((data) => data.weight),
             backgroundColor: ['#990033'],
             borderColor: 'white',
@@ -27,7 +27,7 @@ const Charts = () => {
     const [heightData, setHeightData] = useState({
         labels: usersStats.map((data) => data._id),
         datasets: [{
-            label: 'Alturas',
+            label: 'Altura del usuario',
             data: usersStats.map((data) => data.height),
             backgroundColor: ['#862d86'],
             borderColor: 'white',
@@ -52,8 +52,8 @@ const Charts = () => {
             <div className='charts'>
                 <BarChart chartData={heightData} />
             </div>
-            <div>
-                <p>Altura de los usuarios en centímetros.</p>
+            <div className='chart-text'>
+                <p >Altura de los usuarios en centímetros.</p>
             </div>
             {/* <p>La media de la altura de los usuario de nuestra web es  cm.</p> */}
         </div>
@@ -61,7 +61,7 @@ const Charts = () => {
             <div className='charts'>
                 <BarChart chartData={weightData} />
             </div>
-            <div>
+            <div className='chart-text'>
                 <p>Esta es una gráfica de los pesos de los usuarios almacenados.</p>
                 {/* <p>La media de los pesos de los usuario de nuestra web es  kg.</p> */}
             </div>
