@@ -1,5 +1,5 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import "./Styles.css";
@@ -8,6 +8,7 @@ const Home = () => {
   const { user } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const goToLogin = () => {
     navigate("/login");
@@ -16,6 +17,10 @@ const Home = () => {
   const chooseProgram = () => {
     navigate("/step-goal");
   };
+
+  useEffect(() => {
+    dispatch({type: 'emptyUserData'})
+  },[])
 
   return (
     <>

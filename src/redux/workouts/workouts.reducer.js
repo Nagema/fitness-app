@@ -16,6 +16,8 @@ const workoutsReducer = (state = INITIAL_STATE, action) => {
             return {...state, isLoading: false, workouts: [], error: action.payload}
         case 'addUserData':
             return {...state, userData: [...state.userData, action.payload] }
+        case 'emptyUserData':
+            return {...state, userData: []}
         case 'getStats':
             return {...state, usersStats: action.payload}
         case 'errorStats':
