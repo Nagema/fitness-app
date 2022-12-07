@@ -62,7 +62,7 @@ const Charts = () => {
                 <BarChart chartData={weightData} />
             </div>
             <div className='chart-text'>
-                <p>Esta es una gráfica de los pesos de los usuarios almacenados.</p>
+                <p>Peso de los usuarios en kilogramos.</p>
                 {/* <p>La media de los pesos de los usuario de nuestra web es  kg.</p> */}
             </div>
         </div>
